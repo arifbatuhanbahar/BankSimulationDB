@@ -5,13 +5,13 @@ import {
   Typography,
   TextField,
   Button,
-  Grid,
   FormControl,
   InputLabel,
   Select,
   MenuItem,
   Alert,
 } from '@mui/material';
+import Grid from '@mui/material/GridLegacy';
 import SendIcon from '@mui/icons-material/Send';
 import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';

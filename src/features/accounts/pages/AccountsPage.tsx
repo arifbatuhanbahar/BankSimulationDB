@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import {
   Box,
-  Grid,
   Paper,
   Typography,
   Chip,
@@ -12,6 +11,7 @@ import {
   ListItemSecondaryAction,
   Skeleton,
 } from '@mui/material';
+import Grid from '@mui/material/GridLegacy';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
@@ -70,7 +70,7 @@ const AccountsPage = () => {
           { label: 'Toplam Bakiye (EUR)', value: summary.totalBalanceEUR, currency: 'EUR' },
           { label: 'Aktif Hesap', value: summary.activeAccounts },
         ].map(item => (
-          <Grid item xs={12} sm={6} md={3} key={item.label}>
+          <Grid xs={12} sm={6} md={3} key={item.label}>
             <Paper sx={{ p: 2, display: 'flex', alignItems: 'center', gap: 2 }}>
               <AccountBalanceWalletIcon color="primary" />
               <Box>

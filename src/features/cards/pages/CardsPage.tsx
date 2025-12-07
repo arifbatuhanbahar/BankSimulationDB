@@ -1,13 +1,6 @@
 import { useEffect, useState } from 'react';
-import {
-  Box,
-  Typography,
-  Grid,
-  Paper,
-  Chip,
-  Divider,
-  Skeleton,
-} from '@mui/material';
+import { Box, Typography, Paper, Chip, Divider, Skeleton } from '@mui/material';
+import Grid from '@mui/material/GridLegacy';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import { cardService } from '../../../api';
 import { CreditCard } from '../../../types';

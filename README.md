@@ -47,9 +47,8 @@ VITE_APP_VERSION=1.0.0
 - `npm run lint` – ESLint çalıştır
 
 ## Mevcut Durum
-- Tamamlananlar: Login sayfası, Dashboard, temel layout (Header/Sidebar), API servisleri.
-- Eksikler: Hesap/işlem/kart ekranları, transfer akışları, KYC/KVKK, admin ekranları.
+- Tamamlananlar: Login sayfası, Dashboard, Hesaplar, İşlem Geçmişi, Para Transferi, Kartlar, Kart Başvurusu, KYC/KVKK sayfaları, temel layout (Header/Sidebar), API servisleri.
+- Eksikler: Admin ekranları, hesap/kart detay sayfaları, kayıt sayfası.
 
 ## Notlar
-- Backend kaynak kodu frontend altında tutulmamalı (örn. `src/BankSimulation.API` vb. klasörler). Bunlar derleme boyutunu şişirir; lütfen kaldırın.
 - Mock login e-posta eşleştirmesiyle çalışır; gerçek kimlik doğrulama için backend auth endpointlerine geçilmesi gerekir.

@@ -178,7 +178,8 @@ export const transferSchema = yup.object({
     .required('Tutar zorunludur'),
   description: yup
     .string()
-    .max(255, 'Açıklama en fazla 255 karakter olabilir'),
+    .max(255, 'Açıklama en fazla 255 karakter olabilir')
+    .required('Açıklama zorunludur'),
 });
 
 /**

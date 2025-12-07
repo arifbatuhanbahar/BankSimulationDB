@@ -10,6 +10,7 @@ import DashboardPage from '../features/dashboard/pages/DashboardPage';
 import KycPage from '../features/compliance/pages/KycPage';
 import KvkkPage from '../features/compliance/pages/KvkkPage';
 import AccountsPage from '../features/accounts/pages/AccountsPage';
+import NewAccountPage from '../features/accounts/pages/NewAccountPage';
 import TransactionsPage from '../features/transactions/pages/TransactionsPage';
 import TransferPage from '../features/transactions/pages/TransferPage';
 import CardsPage from '../features/cards/pages/CardsPage';
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: 'accounts',
         element: <AccountsPage />,
+      },
+      {
+        path: 'accounts/new',
+        element: <NewAccountPage />,
       },
       {
         path: 'accounts/:id',

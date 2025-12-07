@@ -3,7 +3,6 @@ import {
   Box,
   Typography,
   Paper,
-  Grid,
   Switch,
   FormControlLabel,
   Divider,
@@ -19,6 +18,7 @@ import {
   ListItem,
   ListItemText,
 } from '@mui/material';
+import Grid from '@mui/material/GridLegacy';
 import GavelIcon from '@mui/icons-material/Gavel';
 import DescriptionIcon from '@mui/icons-material/Description';
 import { complianceService } from '../../../api';
