@@ -216,8 +216,28 @@ export const ibanSchema = yup.object({
     .required('IBAN zorunludur'),
 });
 
+/**
+ * KYC belge yükleme şeması
+ */
+export const kycUploadSchema = yup.object({
+  documentType: yup.string().required('Belge türü zorunludur'),
+  documentNumber: yup.string().min(4, 'Belge numarası çok kısa').required('Belge numarası zorunludur'),
+});
+
+/**
+ * KVKK talep şeması
+ */
+export const kvkkRequestSchema = yup.object({
+  requestType: yup
+    .string()
+    .oneOf(['Access', 'Rectification', 'Erasure', 'Portability'], 'Geçerli bir talep türü seçiniz')
+    .required('Talep türü zorunludur'),
+});
+
 // Type exports for form data
 export type LoginFormData = yup.InferType<typeof loginSchema>;
 export type RegisterFormData = yup.InferType<typeof registerSchema>;
 export type TransferFormData = yup.InferType<typeof transferSchema>;
 export type CardApplicationFormData = yup.InferType<typeof cardApplicationSchema>;
+export type KycUploadFormData = yup.InferType<typeof kycUploadSchema>;
+export type KvkkRequestFormData = yup.InferType<typeof kvkkRequestSchema>;

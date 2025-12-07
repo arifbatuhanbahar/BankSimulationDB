@@ -48,7 +48,7 @@ const Sidebar = ({ open, onClose, isAdmin = false }: SidebarProps) => {
   const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({});
 
   const handleToggleMenu = (title: string) => {
-    setOpenMenus((prev) => ({ ...prev, [title]: !prev[title] }));
+    setOpenMenus(prev => ({ ...prev, [title]: !prev[title] }));
   };
 
   const handleNavigate = (path: string) => {
@@ -57,16 +57,8 @@ const Sidebar = ({ open, onClose, isAdmin = false }: SidebarProps) => {
   };
 
   const menuItems: MenuItem[] = [
-    {
-      title: 'Dashboard',
-      path: '/dashboard',
-      icon: <DashboardIcon />,
-    },
-    {
-      title: 'Hesaplarım',
-      path: '/accounts',
-      icon: <AccountBalanceWalletIcon />,
-    },
+    { title: 'Dashboard', path: '/dashboard', icon: <DashboardIcon /> },
+    { title: 'Hesaplarım', path: '/accounts', icon: <AccountBalanceWalletIcon /> },
     {
       title: 'İşlemler',
       icon: <SwapHorizIcon />,
@@ -112,7 +104,7 @@ const Sidebar = ({ open, onClose, isAdmin = false }: SidebarProps) => {
     return location.pathname === path || location.pathname.startsWith(path + '/');
   };
 
-  const renderMenuItem = (item: MenuItem, depth: number = 0) => {
+  const renderMenuItem = (item: MenuItem, depth = 0) => {
     const hasChildren = item.children && item.children.length > 0;
     const isMenuOpen = openMenus[item.title];
     const active = isActive(item.path);
@@ -164,7 +156,7 @@ const Sidebar = ({ open, onClose, isAdmin = false }: SidebarProps) => {
         {hasChildren && (
           <Collapse in={isMenuOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              {item.children!.map((child) => renderMenuItem(child, depth + 1))}
+              {item.children!.map(child => renderMenuItem(child, depth + 1))}
             </List>
           </Collapse>
         )}
@@ -187,8 +179,8 @@ const Sidebar = ({ open, onClose, isAdmin = false }: SidebarProps) => {
         },
       }}
     >
-      <Box sx={{ height: 64 }} /> {/* Toolbar spacer */}
-      
+      <Box sx={{ height: 64 }} />
+
       <Box sx={{ p: 2 }}>
         <Typography variant="overline" color="text.secondary" sx={{ px: 1 }}>
           Ana Menü
@@ -196,7 +188,7 @@ const Sidebar = ({ open, onClose, isAdmin = false }: SidebarProps) => {
       </Box>
 
       <List sx={{ px: 1 }}>
-        {allMenuItems.slice(0, 4).map((item) => renderMenuItem(item))}
+        {allMenuItems.slice(0, 4).map(item => renderMenuItem(item))}
       </List>
 
       <Divider sx={{ my: 1 }} />
@@ -208,7 +200,7 @@ const Sidebar = ({ open, onClose, isAdmin = false }: SidebarProps) => {
       </Box>
 
       <List sx={{ px: 1 }}>
-        {allMenuItems.slice(4).map((item) => renderMenuItem(item))}
+        {allMenuItems.slice(4).map(item => renderMenuItem(item))}
       </List>
     </Drawer>
   );

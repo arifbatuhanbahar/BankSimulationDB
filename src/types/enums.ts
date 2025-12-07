@@ -128,6 +128,29 @@ export const EmploymentStatus = {
 export type EmploymentStatus = typeof EmploymentStatus[keyof typeof EmploymentStatus];
 
 // Compliance
+export const ConsentType = {
+  DataProcessing: 'DataProcessing',
+  Marketing: 'Marketing',
+  ThirdPartyTransfer: 'ThirdPartyTransfer',
+} as const;
+export type ConsentType = typeof ConsentType[keyof typeof ConsentType];
+
+export const KvkkRequestType = {
+  Access: 'Access',
+  Rectification: 'Rectification',
+  Erasure: 'Erasure',
+  Portability: 'Portability',
+} as const;
+export type KvkkRequestType = typeof KvkkRequestType[keyof typeof KvkkRequestType];
+
+export const RequestStatus = {
+  Pending: 'Pending',
+  InProgress: 'InProgress',
+  Completed: 'Completed',
+  Rejected: 'Rejected',
+} as const;
+export type RequestStatus = typeof RequestStatus[keyof typeof RequestStatus];
+
 export const DocumentType = {
   IdentityCard: 'IdentityCard',
   Passport: 'Passport',

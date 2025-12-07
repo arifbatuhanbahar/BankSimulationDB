@@ -46,9 +46,14 @@ export const API_ENDPOINTS = {
   // ==================== COMPLIANCE ====================
   COMPLIANCE: {
     BASE: '/Compliance',
+    GET_KYC_DOCUMENTS: (userId: number) => `/Compliance/kyc-documents/${userId}`,
     UPLOAD_DOCUMENT: '/Compliance/upload-document',
     VERIFY_DOCUMENT: '/Compliance/verify-document',
     REPORT_SUSPICIOUS: '/Compliance/report-suspicious-activity',
+    GET_CONSENTS: (userId: number) => `/Compliance/consents/${userId}`,
+    UPSERT_CONSENT: '/Compliance/consents',
+    GET_KVKK_REQUESTS: (userId: number) => `/Compliance/kvkk-requests/${userId}`,
+    CREATE_KVKK_REQUEST: '/Compliance/kvkk-requests',
   },
 
   // ==================== FRAUD ====================

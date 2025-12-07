@@ -126,6 +126,26 @@ export const EMPLOYMENT_STATUS_LABELS: Record<string, string> = {
   Student: 'Öğrenci',
 };
 
+export const CONSENT_TYPE_LABELS: Record<string, string> = {
+  DataProcessing: 'Veri İşleme',
+  Marketing: 'Pazarlama',
+  ThirdPartyTransfer: '3. Taraf Paylaşımı',
+};
+
+export const KVKK_REQUEST_TYPE_LABELS: Record<string, string> = {
+  Access: 'Veri Erişimi',
+  Rectification: 'Düzeltme',
+  Erasure: 'Silme (Unutulma)',
+  Portability: 'Veri Taşıma',
+};
+
+export const REQUEST_STATUS_LABELS: Record<string, string> = {
+  Pending: 'Beklemede',
+  InProgress: 'İşleniyor',
+  Completed: 'Tamamlandı',
+  Rejected: 'Reddedildi',
+};
+
 // ==================== RISK LEVELS ====================
 
 export const RISK_LEVEL_LABELS: Record<string, string> = {

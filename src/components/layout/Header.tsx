@@ -15,8 +15,6 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import { useNavigate } from 'react-router-dom';
@@ -51,16 +49,6 @@ const Header = ({ onMenuClick, user, onLogout }: HeaderProps) => {
 
   const handleNotificationClose = () => {
     setNotificationAnchor(null);
-  };
-
-  const handleProfile = () => {
-    handleMenuClose();
-    navigate('/profile');
-  };
-
-  const handleSettings = () => {
-    handleMenuClose();
-    navigate('/settings');
   };
 
   const handleLogoutClick = () => {
@@ -165,7 +153,7 @@ const Header = ({ onMenuClick, user, onLogout }: HeaderProps) => {
                 fontSize: '0.875rem',
               }}
             >
-              {user ? getInitials(fullName) : <AccountCircleIcon />}
+              {user ? getInitials(fullName) : null}
             </Avatar>
           </IconButton>
         </Tooltip>
@@ -188,19 +176,6 @@ const Header = ({ onMenuClick, user, onLogout }: HeaderProps) => {
               {user?.email}
             </Typography>
           </Box>
-          <Divider />
-          <MenuItem onClick={handleProfile}>
-            <ListItemIcon>
-              <AccountCircleIcon fontSize="small" />
-            </ListItemIcon>
-            Profilim
-          </MenuItem>
-          <MenuItem onClick={handleSettings}>
-            <ListItemIcon>
-              <SettingsIcon fontSize="small" />
-            </ListItemIcon>
-            Ayarlar
-          </MenuItem>
           <Divider />
           <MenuItem onClick={handleLogoutClick}>
             <ListItemIcon>

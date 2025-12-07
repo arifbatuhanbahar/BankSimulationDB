@@ -7,6 +7,13 @@ import LoginPage from '../features/auth/pages/LoginPage';
 
 // Dashboard
 import DashboardPage from '../features/dashboard/pages/DashboardPage';
+import KycPage from '../features/compliance/pages/KycPage';
+import KvkkPage from '../features/compliance/pages/KvkkPage';
+import AccountsPage from '../features/accounts/pages/AccountsPage';
+import TransactionsPage from '../features/transactions/pages/TransactionsPage';
+import TransferPage from '../features/transactions/pages/TransferPage';
+import CardsPage from '../features/cards/pages/CardsPage';
+import CardApplicationPage from '../features/cards/pages/CardApplicationPage';
 
 // Placeholder component for pages not yet created
 const ComingSoon = ({ title }: { title: string }) => (
@@ -52,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'accounts',
-        element: <ComingSoon title="Hesaplarım" />,
+        element: <AccountsPage />,
       },
       {
         path: 'accounts/:id',
@@ -60,19 +67,19 @@ const router = createBrowserRouter([
       },
       {
         path: 'transactions',
-        element: <ComingSoon title="İşlem Geçmişi" />,
+        element: <TransactionsPage />,
       },
       {
         path: 'transfer',
-        element: <ComingSoon title="Para Transferi" />,
+        element: <TransferPage />,
       },
       {
         path: 'cards',
-        element: <ComingSoon title="Kartlarım" />,
+        element: <CardsPage />,
       },
       {
         path: 'cards/apply',
-        element: <ComingSoon title="Kart Başvurusu" />,
+        element: <CardApplicationPage />,
       },
       {
         path: 'cards/:id',
@@ -80,19 +87,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'compliance/kyc',
-        element: <ComingSoon title="KYC Belgeleri" />,
+        element: <KycPage />,
       },
       {
         path: 'compliance/kvkk',
-        element: <ComingSoon title="KVKK Yönetimi" />,
-      },
-      {
-        path: 'profile',
-        element: <ComingSoon title="Profilim" />,
-      },
-      {
-        path: 'settings',
-        element: <ComingSoon title="Ayarlar" />,
+        element: <KvkkPage />,
       },
       // Admin Routes
       {
