@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+bin/
+obj/
+.vs/
+appsettings.json
+>>>>>>> c52f38daac56e772af59183e1a3ddbefb149171c
